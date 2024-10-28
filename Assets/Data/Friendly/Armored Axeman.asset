@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033c1ab747de0ec4389a9098919fceda, type: 3}
+  m_Name: Armored Axeman
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: -6528227335110252713, guid: a75f236466f3ef6499a7386bc7d2dff0, type: 3}
+  <UnitKorName>k__BackingField: "\uB7FC\uBC84\uC7AD"
+  <UnitName>k__BackingField: Armored Axeman
+  <Level>k__BackingField: 1
+  <Health>k__BackingField: 500
+  <Damage>k__BackingField: 30
+  <AttackSpeed>k__BackingField: 2.5
+  <MoveSpeed>k__BackingField: 18
+  <DetectRange>k__BackingField: 8
+  <AttackRange>k__BackingField: 2
+  <Cost>k__BackingField: 250
+  <MoveDir>k__BackingField: 1
+  <unitUpgradeData>k__BackingField: {fileID: 11400000, guid: d34178853cd72fc46a69d031d5a7bb22, type: 2}
+  <MaxHealth>k__BackingField: 0
+  <MaxDamage>k__BackingField: 0

@@ -1,0 +1,12 @@
+KorName,Name,Level,Health,Damage,Attack Speed,Move Speed,Detect Ranage,Attack Range,Cost,Move Dir
+슬라임,Slime,1,240,14,0.7,14,8,1,100,-1
+해골궁수,Skeleton Archer,1,280,24,1.4,16,8,4,180,-1
+해골병사,Skeleton,1,380,22,1.2,15,8,2,200,-1
+오크,Orc,1,460,26,1.2,15,8,2,250,-1
+오크라이더,Orc Rider,1,520,28,1.3,16,8,2,300,-1
+스켈레톤전사,Armored Skeleton,1,540,28,1,13,8,2,300,-1
+오크전사,Armored Orc,1,580,30,0.9,13,8,2,320,-1
+엘리트해골,Greatsword Skeleton,1,660,36,0.8,12,8,2,350,-1
+웨어울프,Werewolf,1,660,42,1.1,15,8,2,380,-1
+엘리트오크,Elite Orc,1,700,40,1.1,14,8,2,400,-1
+웨어베어,Werebear,1,740,44,0.7,12,8,2,450,-1

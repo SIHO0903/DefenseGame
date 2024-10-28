@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033c1ab747de0ec4389a9098919fceda, type: 3}
+  m_Name: Swordsman
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: -2746661068948775126, guid: 73d0322596e8f8e468e2fd3d3e950596, type: 3}
+  <UnitKorName>k__BackingField: "\uC18C\uB4DC\uB9E8"
+  <UnitName>k__BackingField: Swordsman
+  <Level>k__BackingField: 1
+  <Health>k__BackingField: 500
+  <Damage>k__BackingField: 28
+  <AttackSpeed>k__BackingField: 2.9
+  <MoveSpeed>k__BackingField: 14
+  <DetectRange>k__BackingField: 8
+  <AttackRange>k__BackingField: 2
+  <Cost>k__BackingField: 250
+  <MoveDir>k__BackingField: 1
+  <unitUpgradeData>k__BackingField: {fileID: 11400000, guid: 27f15920cd71f32438e37b95497b23b5, type: 2}
+  <MaxHealth>k__BackingField: 0
+  <MaxDamage>k__BackingField: 0

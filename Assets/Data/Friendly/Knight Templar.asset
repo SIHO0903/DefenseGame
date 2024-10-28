@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033c1ab747de0ec4389a9098919fceda, type: 3}
+  m_Name: Knight Templar
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: 1746907709339618889, guid: aff369212a43ae64d881e637713411ed, type: 3}
+  <UnitKorName>k__BackingField: "\uC131\uAE30\uC0AC"
+  <UnitName>k__BackingField: Knight Templar
+  <Level>k__BackingField: 1
+  <Health>k__BackingField: 600
+  <Damage>k__BackingField: 28
+  <AttackSpeed>k__BackingField: 3
+  <MoveSpeed>k__BackingField: 13
+  <DetectRange>k__BackingField: 8
+  <AttackRange>k__BackingField: 2
+  <Cost>k__BackingField: 350
+  <MoveDir>k__BackingField: 1
+  <unitUpgradeData>k__BackingField: {fileID: 11400000, guid: 78cdd33500dc50e4cb91c1ddc8d08b4a, type: 2}
+  <MaxHealth>k__BackingField: 0
+  <MaxDamage>k__BackingField: 0

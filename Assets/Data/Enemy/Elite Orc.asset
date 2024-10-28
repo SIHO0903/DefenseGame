@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033c1ab747de0ec4389a9098919fceda, type: 3}
+  m_Name: Elite Orc
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: -3575578603088190293, guid: 2a1e39b528fbad44791fc53872f78f08, type: 3}
+  <UnitKorName>k__BackingField: "\uC5D8\uB9AC\uD2B8\uC624\uD06C"
+  <UnitName>k__BackingField: EliteOrc
+  <Level>k__BackingField: 1
+  <Health>k__BackingField: 700
+  <Damage>k__BackingField: 40
+  <AttackSpeed>k__BackingField: 3.1
+  <MoveSpeed>k__BackingField: 14
+  <DetectRange>k__BackingField: 8
+  <AttackRange>k__BackingField: 2
+  <Cost>k__BackingField: 400
+  <MoveDir>k__BackingField: -1
+  <unitUpgradeData>k__BackingField: {fileID: 0}
+  <MaxHealth>k__BackingField: 0
+  <MaxDamage>k__BackingField: 0

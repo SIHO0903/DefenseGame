@@ -1,0 +1,10 @@
+KorName,Name,Level,Health,Damage,Attack Speed,Move Speed,Detect Range,Attack Range,Cost,Health Growth,Damage Growth,Move Dir
+궁수,Archer,1,300,20,1.5,16,8,5,150,30,4,1
+마법사,Wizard,1,300,35,1,12,8,4,200,30,6,1
+성직자,Priest,1,350,18,1,13,8,4,180,30,4,1
+군인,Soldier,1,450,22,1.3,14,8,2,220,35,4,1
+랜서,Lancer,1,480,32,1.2,15,8,3,200,40,5,1
+럼버잭,Armored Axeman,1,500,30,1,12,8,2,250,45,5,1
+소드맨,Swordsman,1,500,28,1.2,14,8,2,250,40,5,1
+기사,Knight,1,550,25,1.2,14,8,2,300,50,5,1
+성기사,Knight Templar,1,600,28,1,13,8,2,350,55,6,1

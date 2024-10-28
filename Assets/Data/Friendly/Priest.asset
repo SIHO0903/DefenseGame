@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033c1ab747de0ec4389a9098919fceda, type: 3}
+  m_Name: Priest
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: -1144577787283017104, guid: 70ab6ce21e5d9f547b78da475eef52d9, type: 3}
+  <UnitKorName>k__BackingField: "\uC131\uC9C1\uC790"
+  <UnitName>k__BackingField: Priest
+  <Level>k__BackingField: 1
+  <Health>k__BackingField: 350
+  <Damage>k__BackingField: 18
+  <AttackSpeed>k__BackingField: 2.5
+  <MoveSpeed>k__BackingField: 8
+  <DetectRange>k__BackingField: 8
+  <AttackRange>k__BackingField: 4
+  <Cost>k__BackingField: 180
+  <MoveDir>k__BackingField: 1
+  <unitUpgradeData>k__BackingField: {fileID: 11400000, guid: ae6cd6ecd2a639545934f521172a10c7, type: 2}
+  <MaxHealth>k__BackingField: 460
+  <MaxDamage>k__BackingField: 33

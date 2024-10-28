@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Greatsword Skeleton
+  m_Controller: {fileID: 9100000, guid: b3be22ec17e318e429a79b1f418a3ab1, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 8a7ce9af8d4b1de4d9687075c8ea00f1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 05b4a3130a6b4db45b1e3d496cbbfe94, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5739e69d3616f8343816520682ff4735, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: baee132fc962b194cb9eaab1972ad7d7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f2d008fab95520c4cbb8b7ba40e27b21, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0cbff0a64a3c9fe419536363bbbfd5bc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c49d797baaa5aa64bbd1fd1f94200278, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 08860348b1083e548a1cfed9a7253bfc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1d86b480b96616247ab3b6fb6cb2645b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 03dda2153d190c941ad60f2aa1f67945, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ca019b77dee1b424c8ed5b8b3e34449f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 58a4b2cdbd400394bac32a4537d69672, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bbad02f1e5beb3a4385acc678361e9ce, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4e0f676804177f84dab7e28b30d19191, type: 2}

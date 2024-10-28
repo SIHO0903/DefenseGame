@@ -1,0 +1,5 @@
+Level,MoneyCost,GemCost,HealthGrowth,DamageGrowth
+2,300,0,35,5
+3,800,1,40,5
+4,1700,2,45,6
+5,3200,4,50,7

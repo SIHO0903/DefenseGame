@@ -1,0 +1,5 @@
+Level,MoneyCost,GemCost,SupplySpeed,SupplyCapacity
+2,300,0,10,1000
+3,800,1,15,1500
+4,1700,2,20,1500
+5,3200,4,30,5000

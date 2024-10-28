@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033c1ab747de0ec4389a9098919fceda, type: 3}
+  m_Name: Lancer
+  m_EditorClassIdentifier: 
+  <Image>k__BackingField: {fileID: 5729573847000984109, guid: e90671a73ad17a843ba68c532f07fc1f, type: 3}
+  <UnitKorName>k__BackingField: "\uB79C\uC11C"
+  <UnitName>k__BackingField: Lancer
+  <Level>k__BackingField: 1
+  <Health>k__BackingField: 480
+  <Damage>k__BackingField: 32
+  <AttackSpeed>k__BackingField: 2.9
+  <MoveSpeed>k__BackingField: 16
+  <DetectRange>k__BackingField: 8
+  <AttackRange>k__BackingField: 3
+  <Cost>k__BackingField: 200
+  <MoveDir>k__BackingField: 1
+  <unitUpgradeData>k__BackingField: {fileID: 11400000, guid: 24e3a380b57f4af4eb9f1a2fbc3ca2e4, type: 2}
+  <MaxHealth>k__BackingField: 0
+  <MaxDamage>k__BackingField: 0
