@@ -12,7 +12,6 @@ public class MoveState<T> : BaseState<T> where T : UnitState<T>
     }
     public override void UpdateState(T owner)
     {
-
         owner.rigid.velocity = Convert.ToInt32(unitData.MoveDir) * Vector2.right * MyUtil.MoveSpeed(unitData.MoveSpeed);
         owner.animator.SetBool("IsMove", true);
 

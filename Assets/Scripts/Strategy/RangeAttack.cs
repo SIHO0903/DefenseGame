@@ -11,7 +11,7 @@ public class RangeAttack : AttackStrategy
         {
             SoundManager.Instance.PlaySFX(SoundType.RangeAttack);
             factory = new ConcreteArrowFactory();
-            //Factory factory = new ConcreteArrowFactory();
+
             factory.GetProduct(unitData.Damage,position,targetHealth,targetPos);
 
             canAttack = false;

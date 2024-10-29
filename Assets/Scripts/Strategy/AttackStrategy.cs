@@ -1,7 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UIElements;
-
 
 public abstract class AttackStrategy
 {
@@ -10,7 +8,6 @@ public abstract class AttackStrategy
 
     bool CanAttack(float attackSpeed)
     {
-
         if (attackTimer >= attackSpeed)
         {
             attackTimer = 0f;
@@ -21,7 +18,6 @@ public abstract class AttackStrategy
             attackTimer += Time.deltaTime;
             return false;
         }
-
     }
 
     public void Attack(Animator animator,UnitData unitData, Action<float> targetHealth,Vector3 position,Vector3 targetPos)
@@ -30,9 +26,7 @@ public abstract class AttackStrategy
         {
             animator.SetTrigger("Attack");
             canAttack = true;
-
         }
-
         AttackLogic(animator,unitData, targetHealth, position,targetPos);
     }
     public abstract void AttackLogic(Animator animator, UnitData unitData, Action<float> targetHealth,Vector3 position, Vector3 targetPos);
