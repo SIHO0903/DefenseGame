@@ -11,6 +11,6 @@ Unity로 제작한 포트폴리오입니다.
 
 defense.pptx에 영상및 스크립트설명이 있습니다.
 
-[https://youtu.be/OSqMu23mIyY]
+https://youtu.be/qaIb7-2Z6sg
 게임실행 영상입니다.
 
