@@ -16,14 +16,14 @@ MonoBehaviour:
   <UnitKorName>k__BackingField: "\uB79C\uC11C"
   <UnitName>k__BackingField: Lancer
   <Level>k__BackingField: 1
-  <Health>k__BackingField: 480
-  <Damage>k__BackingField: 32
+  <Health>k__BackingField: 800
+  <Damage>k__BackingField: 40
   <AttackSpeed>k__BackingField: 2.9
-  <MoveSpeed>k__BackingField: 16
+  <MoveSpeed>k__BackingField: 20
   <DetectRange>k__BackingField: 8
   <AttackRange>k__BackingField: 3
-  <Cost>k__BackingField: 200
+  <Cost>k__BackingField: 400
   <MoveDir>k__BackingField: 1
   <unitUpgradeData>k__BackingField: {fileID: 11400000, guid: 24e3a380b57f4af4eb9f1a2fbc3ca2e4, type: 2}
-  <MaxHealth>k__BackingField: 0
-  <MaxDamage>k__BackingField: 0
+  <MaxHealth>k__BackingField: 950
+  <MaxDamage>k__BackingField: 63

@@ -23,12 +23,12 @@ public class HealState<T> : BaseState<T> where T : UnitState<T>
     {
         owner.rigid.velocity = Vector3.zero;
         target = owner.searhTarget.TargetTag();
-        Transform targetTransform = owner.searhTarget.HealTargetTransform();
+        Transform targetTransform = owner.searhTarget.HealTargetTransform(unitData.DetectRange);
 
         // 아군을 감지하여 치유
-        if (owner.searhTarget.DetectHealComPareTag(target, out Action<float> targetHeal))
+        if (owner.searhTarget.DetectHealComPareTag(target,unitData.DetectRange, out Action<float> targetHeal))
         {
-            attackStrategy.Attack(owner.animator,unitData, targetHeal, owner.transform.position, targetTransform.position);
+            attackStrategy.Attack(owner.animator,unitData, target, targetHeal, owner.transform.position, targetTransform.position);
         }
         else if(targetTransform == null)
         {

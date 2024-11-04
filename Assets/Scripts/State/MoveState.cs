@@ -15,7 +15,7 @@ public class MoveState<T> : BaseState<T> where T : UnitState<T>
         owner.rigid.velocity = Convert.ToInt32(unitData.MoveDir) * Vector2.right * MyUtil.MoveSpeed(unitData.MoveSpeed);
         owner.animator.SetBool("IsMove", true);
 
-        if (owner.searhTarget.DetectComPareTag(owner.searhTarget.TargetTag()))
+        if (owner.searhTarget.DetectComPareTag(owner.searhTarget.TargetTag(),unitData.DetectRange))
             owner.TransitionToState(EUnit.Chasing);
 
     }

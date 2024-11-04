@@ -4,19 +4,23 @@
 public class ChasingState<T> : BaseState<T> where T : UnitState<T>
 {
     Transform enemyTransform;
+    Vector3 dir;
     public ChasingState(UnitData unitData) : base(unitData)
     {
     }
-
     public override void EnterState()
     {
         enemyTransform = null;
+        dir = Vector3.right;
         Debug.Log("ChasingState<T>");      
     }
     public override void UpdateState(T owner)
     {
-        enemyTransform = owner.searhTarget.TargetTransform();
-        Vector3 dir = Vector3.zero;
+        enemyTransform = owner.searhTarget.TargetTransform(unitData.DetectRange);
+
+        owner.rigid.velocity = dir * MyUtil.MoveSpeed(unitData.MoveSpeed);
+        owner.animator.SetBool("IsMove", true);
+
         if (enemyTransform == null)
             owner.TransitionToState(EUnit.Move);
         else
@@ -25,9 +29,6 @@ public class ChasingState<T> : BaseState<T> where T : UnitState<T>
             dir.Normalize();
             InAttackRange(owner);
         }
-
-        owner.rigid.velocity = dir * MyUtil.MoveSpeed(unitData.MoveSpeed);
-        owner.animator.SetBool("IsMove", true);
     }
 
     private void InAttackRange(T owner)

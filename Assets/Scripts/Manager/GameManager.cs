@@ -65,9 +65,7 @@ public class GameManager : MonoBehaviour, ICastleObserver
 
         MyUtil.JsonSave((money, gem), MyUtil.JsonFileName.Resources);
 
-        WaveClearData waveClearData = new WaveClearData { WaveClear = waveData.waveIndex };
-        MyUtil.JsonSave(waveClearData, MyUtil.JsonFileName.WaveClear);
-
+        WaveClearSave();
         PoolManager.Instance.DeactivateAllChildren();
     }
     private void Lose()
@@ -76,5 +74,14 @@ public class GameManager : MonoBehaviour, ICastleObserver
         moneyTxt.text = "0";
         gemTxt.text = "0";
     }
+    void WaveClearSave()
+    {
+        WaveClearData waveClearData =  MyUtil.JsonLoad<WaveClearData>(MyUtil.JsonFileName.WaveClear);
+        if(waveClearData == null || waveClearData.WaveClear < waveData.waveIndex)
+        {
+            waveClearData = new WaveClearData { WaveClear = waveData.waveIndex };
+            MyUtil.JsonSave(waveClearData, MyUtil.JsonFileName.WaveClear);
+        }
 
+    }
 }

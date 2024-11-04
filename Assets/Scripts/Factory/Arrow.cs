@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class Arrow : Projectile, IProjectile
 {
-    //화살 로직
     public float Damage { get; set; }
-    public void Initialize(float unitDamage, Action<float> targetHealth)
+    public string TargetString;
+
+    public void Initialize(float unitDamage,string TargetString, Action<float> targetHealth)
     {
         Damage = unitDamage;
         startPos = transform.position;
         this.targetHealth = targetHealth;
+        this.TargetString = TargetString;
     }
 
     public void Shoot(Vector3 targetPosition)
     {
         dirPos = targetPosition - startPos;
         dirPos.Normalize();
-
+        spriteRenderer.flipX = dirPos.x < 0;
         rigid.AddForce(dirPos * speed, ForceMode2D.Impulse);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag(TargetString))
         {
             targetHealth.Invoke(Damage);
             gameObject.SetActive(false);

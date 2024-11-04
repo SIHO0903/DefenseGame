@@ -20,9 +20,6 @@ public class GenerateWaveDataSO : EditorWindow
         public int spawnTime;
         public int spawnDelay;
     }
-
-
-
     [MenuItem("MyUtilities/Generate Wave SO")]
     public static void ShowWindow()
     {
@@ -30,7 +27,6 @@ public class GenerateWaveDataSO : EditorWindow
         window.minSize = new Vector2(1000, 400);
         window.maxSize = new Vector2(1000, 400);
     }
-
     private void OnGUI()
     {
         GUILayout.Label("Wave Data", EditorStyles.boldLabel);
@@ -86,7 +82,6 @@ public class GenerateWaveDataSO : EditorWindow
             GenerateSO();
         }
     }
-
     private void GenerateSO()
     {
         WaveDataSO waveData = ScriptableObject.CreateInstance<WaveDataSO>();

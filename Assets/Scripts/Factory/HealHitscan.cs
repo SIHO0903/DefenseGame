@@ -8,7 +8,6 @@ public class HealHitscan : HitScan
     {
         if (collision.CompareTag("Friendly"))
         {
-            StopCoroutine(SetActiveFalse());
             StartCoroutine(SetActiveFalse());
             canAttack = false;
         }

@@ -20,15 +20,15 @@ public abstract class AttackStrategy
         }
     }
 
-    public void Attack(Animator animator,UnitData unitData, Action<float> targetHealth,Vector3 position,Vector3 targetPos)
+    public void Attack(Animator animator,UnitData unitData,string targetString, Action<float> targetHealth,Vector3 position,Vector3 targetPos)
     {
         if (CanAttack(unitData.AttackSpeed))
         {
             animator.SetTrigger("Attack");
             canAttack = true;
         }
-        AttackLogic(animator,unitData, targetHealth, position,targetPos);
+        AttackLogic(animator,unitData, targetString, targetHealth, position,targetPos);
     }
-    public abstract void AttackLogic(Animator animator, UnitData unitData, Action<float> targetHealth,Vector3 position, Vector3 targetPos);
+    public abstract void AttackLogic(Animator animator, UnitData unitData,string targetString, Action<float> targetHealth,Vector3 position, Vector3 targetPos);
 
 }

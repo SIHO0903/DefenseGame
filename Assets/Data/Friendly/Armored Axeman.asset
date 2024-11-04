@@ -19,11 +19,11 @@ MonoBehaviour:
   <Health>k__BackingField: 500
   <Damage>k__BackingField: 30
   <AttackSpeed>k__BackingField: 2.5
-  <MoveSpeed>k__BackingField: 18
+  <MoveSpeed>k__BackingField: 22
   <DetectRange>k__BackingField: 8
   <AttackRange>k__BackingField: 2
   <Cost>k__BackingField: 250
   <MoveDir>k__BackingField: 1
   <unitUpgradeData>k__BackingField: {fileID: 11400000, guid: d34178853cd72fc46a69d031d5a7bb22, type: 2}
-  <MaxHealth>k__BackingField: 0
-  <MaxDamage>k__BackingField: 0
+  <MaxHealth>k__BackingField: 690
+  <MaxDamage>k__BackingField: 53

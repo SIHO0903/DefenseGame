@@ -18,11 +18,8 @@ public class UnitSpawn : MonoBehaviour
     float curSpeed;
     float curCapacity;
     int curCapacityLvl = 1;
-
-
     private void Awake()
     {
-        curResources = 1000f; //TMP
         JsonLoad();
         Init();
         ResourcesInit();
@@ -60,7 +57,6 @@ public class UnitSpawn : MonoBehaviour
 
         supplyUpBtn.interactable = curCapacity / 2 <= curResources && curCapacityLvl <= 5 ? true : false;
     }
-
     private void JsonLoad()
     {
 
@@ -75,7 +71,6 @@ public class UnitSpawn : MonoBehaviour
             //Debug.Log("\n name : " + selectedUnits[i].unitName + "\n cost : " + selectedUnits[i].cost);
         }
     }
-
     private void Init()
     {
         for (int i = 0; i < buttons.Length; i++)
@@ -92,7 +87,6 @@ public class UnitSpawn : MonoBehaviour
             });
         }
     }
-
     void CreateUnit(int i)
     {
         //UnitManager.Instance.friendlyUnit.AddUnit(unit);

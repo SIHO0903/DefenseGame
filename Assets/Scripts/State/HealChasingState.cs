@@ -15,13 +15,13 @@ public class HealChasingState<T> : BaseState<T> where T : UnitState<T>
     {
         Debug.Log("HealChasingState Update");
         Vector3 dir = Vector3.right;
-        enemyTransform = owner.searhTarget.HealTargetTransform();
+        enemyTransform = owner.searhTarget.HealTargetTransform(unitData.DetectRange);
         owner.animator.SetBool("IsMove", true);
 
         if (enemyTransform != null)
         {
             float distance = Vector3.Distance(enemyTransform.position, owner.transform.position);
-            if (distance <= unitData.DetectRange)
+            if (distance <= unitData.AttackRange)
             {
                 owner.rigid.velocity = Vector3.zero;
                 owner.animator.SetBool("IsMove", false);

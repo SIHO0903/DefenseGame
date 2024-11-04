@@ -4,7 +4,7 @@ using UnityEngine;
 public class Heal : AttackStrategy
 {
 
-    public override void AttackLogic(Animator animator, UnitData unitData, Action<float> targetHealth, Vector3 position, Vector3 targetPos)
+    public override void AttackLogic(Animator animator, UnitData unitData,string targetString, Action<float> targetHealth, Vector3 position, Vector3 targetPos)
     {
         Debug.Log("힐");
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack01") &&

@@ -19,7 +19,7 @@ MonoBehaviour:
   <Health>k__BackingField: 740
   <Damage>k__BackingField: 44
   <AttackSpeed>k__BackingField: 2.7
-  <MoveSpeed>k__BackingField: 12
+  <MoveSpeed>k__BackingField: 16
   <DetectRange>k__BackingField: 8
   <AttackRange>k__BackingField: 2
   <Cost>k__BackingField: 450

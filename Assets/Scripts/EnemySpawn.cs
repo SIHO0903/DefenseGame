@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-
-
     public WaveDataSO waveData;
 
     public List<UnitData> unitDatas = new List<UnitData>();
@@ -14,17 +12,14 @@ public class EnemySpawn : MonoBehaviour
     int[] curSpawnCount;
     [SerializeField] Castle enemycastle;
     int tempCount;
-
     private void Awake()
     {
-
         enemycastle.castleData.Health = waveData.enemyCastleHealth;
         spawnTimer = new float[waveData.enemies.Count];
         curSpawnCount = new int[waveData.enemies.Count];
     }
     private void Start()
     {
-
         for (int i = 0; i < waveData.enemies.Count; i++)
         {
             GameObject unit = PoolManager.Instance.Get(PoolEnum.Enemy, waveData.enemies[i].name.ToString(), MyUtil.SpawnRandomPos(47f, 54f, -4f, -6.5f), Quaternion.identity);
@@ -42,7 +37,6 @@ public class EnemySpawn : MonoBehaviour
         for (int i = 0; i < waveData.enemies.Count; i++)
             Timer(i, waveData.enemies[i].spawnCount, waveData.enemies[i].spawnDelay);
     }
-
     void Timer(int index,int spawnCount,float spawnDelay)
     {
         if (curSpawnCount[index] >= spawnCount)
@@ -59,9 +53,6 @@ public class EnemySpawn : MonoBehaviour
             }
         }
     }
-
-
-
     void Spawn(int index)
     {
         tempCount++;

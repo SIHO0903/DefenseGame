@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //사운드이름 enum타입으로 선언
@@ -44,20 +42,22 @@ public class SoundManager : Singleton<SoundManager>
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && !soundUI.activeSelf)
+        SoundUI();
+        BGMVolume();
+        SFXVolume();
+    }
+    private void SoundUI()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !soundUI.activeSelf)
         {
             soundUI.SetActive(true);
         }
-        else if(Input.GetKeyDown(KeyCode.Escape) && soundUI.activeSelf)
+        else if (Input.GetKeyDown(KeyCode.Escape) && soundUI.activeSelf)
         {
             MyUtil.JsonSave((BGMSlider.value, SFXSlider.value), MyUtil.JsonFileName.Volum);
             soundUI.SetActive(false);
         }
-
-        BGMVolume();
-        SFXVolume();
     }
-
     public void PlaySFX(SoundType sound)
     {
         sfxAudioSource.PlayOneShot(SFX[(int)sound]);

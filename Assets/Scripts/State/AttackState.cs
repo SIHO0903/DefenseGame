@@ -25,10 +25,10 @@ public class AttackState<T> : BaseState<T> where T : UnitState<T>
         if(target =="")
         {
             target = owner.searhTarget.TargetTag();
-            targetPos = owner.searhTarget.TargetTransform().position;
+            targetPos = owner.searhTarget.TargetTransform(unitData.AttackRange).position;
         }
-        if (owner.searhTarget.DetectComPareTag(target, out Action<float> targetHealth))
-            attackStrategy.Attack(owner.animator,unitData, targetHealth, owner.transform.position, targetPos);
+        if (owner.searhTarget.DetectComPareTag(target, unitData.AttackRange, out Action<float> targetHealth))
+            attackStrategy.Attack(owner.animator,unitData, target, targetHealth, owner.transform.position, targetPos);
         else
             owner.TransitionToState(EUnit.Move);
     }

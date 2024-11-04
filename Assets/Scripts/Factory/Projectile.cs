@@ -7,10 +7,12 @@ public class Projectile : MonoBehaviour
     protected Vector3 startPos;
     protected Vector3 dirPos;
     protected Rigidbody2D rigid;
+    protected SpriteRenderer spriteRenderer;
     protected float speed = 6f;
     protected Action<float> targetHealth;
     public void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 }

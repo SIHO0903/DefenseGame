@@ -1,14 +1,14 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(WaveSelect))]
+[CustomEditor(typeof(WaveSelectMenu))]
 public class WaveSelectEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        WaveSelect waveSelect = (WaveSelect)target; 
+        WaveSelectMenu waveSelect = (WaveSelectMenu)target; 
 
         if (GUILayout.Button("Load WaveData SO"))
         {
@@ -16,7 +16,7 @@ public class WaveSelectEditor : Editor
         }
     }
 
-    private void LoadWaveDataFiles(WaveSelect waveSelect)
+    private void LoadWaveDataFiles(WaveSelectMenu waveSelect)
     {
 
         string[] assetGuids = AssetDatabase.FindAssets("t:WaveDataSO", new[] { "Assets/Data/Wave" });
@@ -28,10 +28,6 @@ public class WaveSelectEditor : Editor
             string assetPath = AssetDatabase.GUIDToAssetPath(assetGuids[i]);
             waveSelect.waveDatas[i] = AssetDatabase.LoadAssetAtPath<WaveDataSO>(assetPath);
 
-            //if (waveSelect.waveDatas[i] != null)
-            //{
-            //    Debug.Log($"Loaded WaveData: {waveSelect.waveDatas[i].name}");
-            //}
         }
     }
 }

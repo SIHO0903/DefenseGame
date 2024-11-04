@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,18 +7,15 @@ public class Castle : MonoBehaviour, IUnitHeatlh
 {
     public CastleData castleData;
     public float Health { get; set; }
-
     Slider healthBar;
     TMP_Text healthTxt;
 
     public Action<Castle> CastleDestroy; 
-
     public void Awake()
     {
         healthBar = GetComponentInChildren<Slider>();
         healthTxt = GetComponentInChildren<TMP_Text>();
     }
-
     private void OnEnable()
     {
         Init();
@@ -35,13 +31,8 @@ public class Castle : MonoBehaviour, IUnitHeatlh
         Health -= damage;
         Health = Mathf.Clamp(Health,0,castleData.Health);
         UpdateHealthBar();
-
         if (IsDead())
-        {
-            CastleDestroy?.Invoke(this);
-        }
-
-        Debug.Log(damage + "의 피해를 입음");
+            Die();
     }
     public bool IsMaxHealth()
     {
@@ -64,12 +55,10 @@ public class Castle : MonoBehaviour, IUnitHeatlh
         healthBar.value = Health / castleData.Health;
         healthTxt.text = Health + " / " + castleData.Health;
     }
-
     public void Die()
     {
-        Debug.Log("게임끝");
+        CastleDestroy?.Invoke(this);
         Debug.Log(castleData.UnitName + " 가 파괴되었습니다");
-
         CastleDestroy = null;
     }
 

@@ -5,15 +5,15 @@ using UnityEngine;
 public class FireBall : Projectile, IProjectile
 {
     [field:SerializeField] public float Damage { get; set; }
+    public string targetString;
 
-    public void Initialize(float unitDamage, Action<float> targetHealth)
+    public void Initialize(float unitDamage,string targetString, Action<float> targetHealth)
     {
         Damage = unitDamage;
         startPos = transform.position;
-        this.targetHealth = null;
         this.targetHealth = targetHealth;
+        this.targetString = targetString;
     }
-
     public void Shoot(Vector3 targetPosition)
     {
         dirPos = targetPosition - startPos;
@@ -23,7 +23,7 @@ public class FireBall : Projectile, IProjectile
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag(targetString))
         {
             targetHealth.Invoke(Damage);
             GameObject explode = PoolManager.Instance.Get(PoolEnum.HitScan, "Explode", transform.position, Quaternion.identity);

@@ -13,13 +13,13 @@ public class SearhTarget
         this.targetLayer = targetLayer;
     }
 
-    public Transform TargetTransform()
+    public Transform TargetTransform(float range)
     {
         Transform target = null;
         float closestDistance = Mathf.Infinity;
 
         // Collider2D[]로 탐색 영역 내의 모든 타겟을 가져옴
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, unitData.DetectRange, targetLayer);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, range, targetLayer);
 
         foreach (Collider2D hitCollider in hitColliders)
         {
@@ -35,10 +35,10 @@ public class SearhTarget
 
         return target;
     }
-    public bool DetectComPareTag(string detectTag, out Action<float> targetHealth)
+    public bool DetectComPareTag(string detectTag,float range, out Action<float> targetHealth)
     {
         Transform target = null;
-        target = TargetTransform();
+        target = TargetTransform(range);
         targetHealth = null;
         if (target == null)
             return false;
@@ -46,20 +46,20 @@ public class SearhTarget
 
         return target.CompareTag(detectTag);
     }
-    public bool DetectComPareTag(string detectTag)
+    public bool DetectComPareTag(string detectTag,float range)
     {
         Transform target = null;
-        target = TargetTransform();
+        target = TargetTransform(range);
         if (target == null)
             return false;
         return target.CompareTag(detectTag);
     }
-    public Transform HealTargetTransform()
+    public Transform HealTargetTransform(float range)
     {
         Transform target = null;
 
         // Collider2D[]로 탐색 영역 내의 모든 타겟을 가져옴
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, unitData.DetectRange, targetLayer);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, range, targetLayer);
 
         foreach (Collider2D hitCollider in hitColliders)
         {
@@ -71,10 +71,12 @@ public class SearhTarget
 
             if (hitCollider.TryGetComponent(out IUnitHeatlh unitHeatlh))
             {
+                //if (!unitHeatlh.IsMaxHealth())
+                //    return hitCollider.transform;
+                //else
+                //    target = hitCollider.transform;
                 if (!unitHeatlh.IsMaxHealth())
                     return hitCollider.transform;
-                else
-                    target = hitCollider.transform;
             }
             else
                 continue;
@@ -87,10 +89,10 @@ public class SearhTarget
 
         return target;
     }
-    public bool DetectHealComPareTag(string detectTag, out Action<float> targetHealth)
+    public bool DetectHealComPareTag(string detectTag,float range, out Action<float> targetHealth)
     {
 
-        Transform target = HealTargetTransform();
+        Transform target = HealTargetTransform(range);
         targetHealth = null;
         if (target == false)
             return false;

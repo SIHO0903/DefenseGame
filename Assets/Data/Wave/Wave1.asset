@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: 
   waveIndex: 1
-  rewardMoney: 300
+  rewardMoney: 800
   rewardGem: 0
   enemyCastleHealth: 1000
   enemies:
   - name: 0
     multiplier: 100
-    spawnCount: 10
+    spawnCount: 5
     spawnTime: 100
-    spawnDelay: 8
+    spawnDelay: 15
   - name: 1
     multiplier: 100
-    spawnCount: 5
-    spawnTime: 50
+    spawnCount: 3
+    spawnTime: 90
     spawnDelay: 5

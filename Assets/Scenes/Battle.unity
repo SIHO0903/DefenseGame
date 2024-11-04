@@ -8133,7 +8133,6 @@ MonoBehaviour:
     - {fileID: 8298093019491821743, guid: 4476f8baf52761341aa26354b2af4c63, type: 3}
     - {fileID: 3994450326232471158, guid: 6055313253ecc5043b96f549194d2389, type: 3}
     - {fileID: 7284005834316609390, guid: f33ff9b91a9ba8842b5de30e391dce67, type: 3}
-    - {fileID: 9005369986904537427, guid: d810422544ed7f14fa39adc01e201298, type: 3}
   - poolType: 3
     prefabs:
     - {fileID: 8298093019491821743, guid: 4476f8baf52761341aa26354b2af4c63, type: 3}
@@ -26207,7 +26206,7 @@ GameObject:
   - component: {fileID: 2075275497}
   m_Layer: 7
   m_Name: FriendlyCaslte
-  m_TagString: Untagged
+  m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

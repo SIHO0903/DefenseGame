@@ -1,12 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(CircleCollider2D))]
 public class Explode : HitScan
 {
     private void OnEnable()
     {
-        StartCoroutine(SetActiveFalse(0.9f));
+        StartCoroutine(SetActiveFalse());
     }
     public override void OnTriggerEnter2D(Collider2D collision)
     {

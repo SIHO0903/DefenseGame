@@ -4,7 +4,7 @@ using UnityEngine;
 public class MagicAttack : AttackStrategy
 {
     Factory factory;
-    public override void AttackLogic(Animator animator, UnitData unitData, Action<float> targetHealth, Vector3 position, Vector3 targetPos)
+    public override void AttackLogic(Animator animator, UnitData unitData,string targetString, Action<float> targetHealth, Vector3 position, Vector3 targetPos)
     {
         Debug.Log("MagicAttack");
 
@@ -13,7 +13,7 @@ public class MagicAttack : AttackStrategy
         {
             SoundManager.Instance.PlaySFX(SoundType.MagicAttack);
             factory = new ConcreteFireBallFactory();
-            factory.GetProduct(unitData.Damage, position, targetHealth, targetPos);
+            factory.GetProduct(unitData.Damage, position, targetString, targetHealth, targetPos);
 
             canAttack = false;
         }

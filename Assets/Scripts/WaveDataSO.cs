@@ -19,8 +19,6 @@ public class WaveDataSO : ScriptableObject
         public int spawnTime;
         public int spawnDelay;
     }
-
-
 }
 public enum EnemyName
 {
